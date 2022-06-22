@@ -94,8 +94,8 @@ header img {
     margin: 0 auto;
     font-size: 1rem;
     background-color: #fff;
-    border: solid 1px #00fffb;
-    color: #00fffb;
+    border: solid 1px #ff0000;
+    color: #7a0202;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
     text-decoration: none;
@@ -108,9 +108,9 @@ header img {
     justify-content: center;
     margin: 0 auto;
     font-size: 1rem;
-    background-color: #fff;
-    border: solid 1px #dbb717;
-    color: #dbb717;;
+    background-color: #ff0000;
+    border: solid 1px #fff;
+    color: #fff;;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
     text-decoration: none;
@@ -118,24 +118,31 @@ header img {
   }
   
   section#cards div.card a#editar:hover {
-    background-color: #00fffb;
-    color: #fff;
+    background-color: #fff;
+    color: #ff0000;
   }
   
   section#cards div.card a#apagar:hover {
-    background-color: #d4ff00;
+    background-color: #ff0000;
     color: #fff;
   }
 
 section#cadastro{
     width: 50%;
     justify-content: center;
-    padding: 10rem 0 0 25rem;
+    padding: 10rem 0 0 20rem;
 }
 
 section#cadastro h2 {
     text-align: center;
-    color: rgb(190, 190, 190);
+    color: rgb(255, 255, 255);
+    text-shadow: 1px 1px 2px rgb(114, 114, 114);
+
+}
+
+section#cadastro p {
+  text-align: center;
+
 }
 
 section#cadastro form {
@@ -176,16 +183,18 @@ section#cadastro form button:hover{
 }
 
 footer {
-    background-color: rgb(23, 120, 117);;
-    padding: 3rem;
-    display: flex;
-    flex-wrap: wrap;
+    width: 100%;
+    background-color: rgb(161, 20, 20);
+    padding: .3rem;
+    display: grid;
     justify-content: center;
+    margin-top: 5rem;
   }
   
   footer p {
     width: 100%;
     color: #fff;
+    background-color: rgb(161, 20, 20);
     text-align: center;
     font-size: 1.2rem;
     padding: 0.3rem;
@@ -193,6 +202,7 @@ footer {
   
   footer p a {
     text-decoration: none;
+    background-color: rgb(196, 81, 81);
     color: #fff;
     font-weight: 600;
   }
@@ -200,8 +210,8 @@ footer {
   /* mensagem de confirmação */
   section#mensagem {
     padding: 1.5rem;
-    background-color: rgb(197, 255, 214);
-    color: #004d04;
+    background-color: rgb(255, 255, 255);
+    color: #a000008a;
     position: fixed;
     top: 3rem;
     left: 0;

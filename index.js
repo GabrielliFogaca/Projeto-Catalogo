@@ -53,7 +53,7 @@ const listaFilmes = [
 let filme = undefined;
 
 app.get("/", function (req, res) {
-  res.render("index", { listaFilmes, filme });
+  res.render("index", { listaFilmes, filme, mensagem });
 });
 
 app.post("/create", (req, res) => {
@@ -87,5 +87,5 @@ app.get("/delete/:id", (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`Servidor rodando em ${port}`);
+  console.log(`Servidor rodando em http://localhost:3000/${port}`);
 });

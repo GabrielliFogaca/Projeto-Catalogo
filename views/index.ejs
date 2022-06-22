@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="/img/icon.jpg" type="image/x-icon">
     <title>GABFLIX</title>
 </head>
 <body>
@@ -16,13 +17,12 @@
     </ul>
 </nav>
 
-<% if(mensagem != ""){ %>
-<section id="mensagem">
-    <p><%=mensagem%> </p>
-    <span id="close">&times;</span>
-</section>
-<% } %>
-
+<% if (mensagem != "") { %>  
+    <section id="mensagem">
+      <p><%=mensagem%> </p>
+      <span id="close">&times;</span>
+  </section>
+  <% } %>
 
 <header> <img src="../img/banner.jpeg" alt=""></header>
 
@@ -33,12 +33,13 @@
     <% listaFilmes.forEach((filme) => { %>
             <div class="card">
 
-        <img src="<%= filme.imagem %>" alt="">
-        <h3><%= filme.titulo %></h3>
-        <p class="classificacao"><%= filme.classificacao %></p>
-        <p>Resumo: <%= filme.resumo %></p>
-        <a id="editar" href="/detalhes/<%= filme.id %>">Editar</a>
-        <a id="apagar" href="/delete/<%= filme.id %>">Apagar</a>
+        <img src="<%=filme.imagem%>" alt="">
+        <h3><%=filme.titulo%></h3>
+        <p class="classificacao"><%=filme.classificacao%></p>
+        <p>Resumo: <%=filme.resumo%></p>
+        <a id="editar" href="/detalhes/<%=filme.id%>">Editar</a>
+        <a id="apagar" href="/delete/<%=filme.id%>">Apagar</a>
+        
 
     </div>
     <% }) %>
@@ -50,7 +51,8 @@
 
         <div>
             <% if (filme==undefined) { %>
-        <h2>Cadastre uma nova opcao de filme.</h2>
+        <h2>QUER VER UM NOVO FILME POR AQUI?</h2>
+        <p>Manda pra gente!!</p>
         <form action="/create" method="POST">
 
         <label for="titulo">Titulo: </label>
@@ -70,13 +72,13 @@
         </form>
         <% } else { %>
             <h2>Atualização de filmes.</h2>
-            <form action="/update/<%= filme.id %>" method="POST">
+            <form action="/update/<%=filme.id%>" method="POST">
                 <label for="titulo">Titulo: </label>
         <input 
         type="text" 
         id="titulo"
         name="titulo" 
-        value="<%= filme.titulo %>"
+        value="<%=filme.titulo%>"
         />
 
         <label for="classificacao">Classificação: </label>
@@ -84,7 +86,7 @@
         type="text" 
         id="classificacao"
         name="classificacao" 
-        value="<%= filme.classificacao %>"
+        value="<%=filme.classificacao%>"
         />
 
         <label for="resumo">Resumo: </label>
@@ -92,7 +94,7 @@
         type="text" 
         id="resumo"
         name="resumo" 
-        value="<%= filme.resumo %>"
+        value="<%=filme.resumo%>"
         />
 
         <label for="imagem">Imagem: </label>
@@ -100,26 +102,20 @@
         type="text" 
         id="imagem"
         name="imagem" 
-        value="<%= filme.imagem %>"
+        value="<%=filme.imagem%>"
         />
 
         <button id="btnCadastrar" type="submit">Atualizar</button>
             </form>
-
+<% } %>
     </section>
 </main>
 <footer>
     <p>
-      PROJETO DESENVOLVIO POR: 
+      Projeto desenvolvido por: 
       <a
         target="_blank"
-        href="https://www.linkedin.com/in/maria-eduarda-de-ara%C3%BAjo-cardoso/"
-        >Gabrielli Fogaca</a
-      >
-      &copy;
-    </p>
-    <p>
-      - Para fins educacionais.
+        href="https://br.linkedin.com/in/gabrielli-gallione-foga%C3%A7a-1b99b7129">Gabrielli Fogaça </a>&copy;  - Para fins educacionais.
     </p>
   </footer>
   <script src="/js/script.js"></script>    
