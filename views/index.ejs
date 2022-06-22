@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>GABFLIX</title>
+</head>
+<body>
+<nav>
+    <ul>
+        <li> <a href="/">GABFLIX</a></li>
+        <li><a href="#cards">Lista</a></li>
+        <li><a href="#cadastro">Cadastro</a></li>
+    </ul>
+</nav>
+
+<% if(mensagem != ""){ %>
+<section id="mensagem">
+    <p><%=mensagem%> </p>
+    <span id="close">&times;</span>
+</section>
+<% } %>
+
+
+<header> <img src="../img/banner.jpeg" alt=""></header>
+
+<main>
+<section id="cards">
+    <h2 id="lista">Lista de Filmes</h2>
+
+    <% listaFilmes.forEach((filme) => { %>
+            <div class="card">
+
+        <img src="<%= filme.imagem %>" alt="">
+        <h3><%= filme.titulo %></h3>
+        <p class="classificacao"><%= filme.classificacao %></p>
+        <p>Resumo: <%= filme.resumo %></p>
+        <a id="editar" href="/detalhes/<%= filme.id %>">Editar</a>
+        <a id="apagar" href="/delete/<%= filme.id %>">Apagar</a>
+
+    </div>
+    <% }) %>
+
+</section>
+
+
+    <section id="cadastro">
+
+        <div>
+            <% if (filme==undefined) { %>
+        <h2>Cadastre uma nova opcao de filme.</h2>
+        <form action="/create" method="POST">
+
+        <label for="titulo">Titulo: </label>
+        <input type="text" name="titulo" id="titulo" required>
+
+        <label for="classificacao">Classificação: </label>
+        <input type="text" name="classificacao" id="classificacao" required>
+
+        <label for="resumo">Resumo: </label>
+        <input type="text" name="resumo" id="resumo" required>
+
+        <label for="imagem">Imagem: </label>
+        <input type="text" name="imagem" id="imagem" required>
+
+        <button id="btnCadastrar" type="submit">Cadastrar</button>
+
+        </form>
+        <% } else { %>
+            <h2>Atualização de filmes.</h2>
+            <form action="/update/<%= filme.id %>" method="POST">
+                <label for="titulo">Titulo: </label>
+        <input 
+        type="text" 
+        id="titulo"
+        name="titulo" 
+        value="<%= filme.titulo %>"
+        />
+
+        <label for="classificacao">Classificação: </label>
+        <input 
+        type="text" 
+        id="classificacao"
+        name="classificacao" 
+        value="<%= filme.classificacao %>"
+        />
+
+        <label for="resumo">Resumo: </label>
+        <input 
+        type="text" 
+        id="resumo"
+        name="resumo" 
+        value="<%= filme.resumo %>"
+        />
+
+        <label for="imagem">Imagem: </label>
+        <input 
+        type="text" 
+        id="imagem"
+        name="imagem" 
+        value="<%= filme.imagem %>"
+        />
+
+        <button id="btnCadastrar" type="submit">Atualizar</button>
+            </form>
+
+    </section>
+</main>
+<footer>
+    <p>
+      PROJETO DESENVOLVIO POR: 
+      <a
+        target="_blank"
+        href="https://www.linkedin.com/in/maria-eduarda-de-ara%C3%BAjo-cardoso/"
+        >Gabrielli Fogaca</a
+      >
+      &copy;
+    </p>
+    <p>
+      - Para fins educacionais.
+    </p>
+  </footer>
+  <script src="/js/script.js"></script>    
+</body>
+</html>
+
+
+
+</body>
+</html>

@@ -1,0 +1,227 @@
+* {
+padding: 0;
+margin: 0;
+font-family: arial;
+background-color: black;
+color: white;
+}
+
+nav {
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    background-color: rgb(161, 20, 20);
+    color: #fff;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    background-color: rgb(161, 20, 20);
+    list-style: none;
+
+}
+
+nav ul li {
+    padding: .9rem;
+    background-color: rgb(161, 20, 20);
+
+}
+
+nav h1 {
+    color: white;
+    font-size: 1.5rem;
+    background-color: rgb(161, 20, 20);
+
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    margin: 0 0 0 1.5rem;
+    background-color: rgb(161, 20, 20);
+
+}
+
+header img {
+    margin-top: 3rem;
+    width: 100%;
+  }
+  
+  main {
+    margin: 0 10rem 0 10rem;
+  }
+  
+  section#cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 5rem;
+  }
+  
+  section#cards h2#lista {
+    color: #eefcfb;
+  }
+  
+  section#cards div.card {
+    width: 20rem;
+    box-shadow: 5px 5px 5px 5px #9e9e9e15;
+    padding: 1rem;
+    margin: 3rem 0 3rem 0;
+  }
+  
+  section#cards h2 {
+    width: 100%;
+    text-align: center;
+  }
+  
+  section#cards div.card img {
+    width: 100%;
+  }
+  
+  section#cards div.card h3 {
+    margin-bottom: 1rem;
+  }
+  
+  section#cards div.card p.descricao {
+    margin-bottom: 1rem;
+  }
+  
+  section#cards div.card a#editar {
+    padding: 0.6rem;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    font-size: 1rem;
+    background-color: #fff;
+    border: solid 1px #00fffb;
+    color: #00fffb;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+    margin-top: 2rem;
+  }
+  
+  section#cards div.card a#apagar {
+    padding: 0.6rem;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    font-size: 1rem;
+    background-color: #fff;
+    border: solid 1px #dbb717;
+    color: #dbb717;;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+    margin-top: 1rem;
+  }
+  
+  section#cards div.card a#editar:hover {
+    background-color: #00fffb;
+    color: #fff;
+  }
+  
+  section#cards div.card a#apagar:hover {
+    background-color: #d4ff00;
+    color: #fff;
+  }
+
+section#cadastro{
+    width: 50%;
+    justify-content: center;
+    padding: 10rem 0 0 25rem;
+}
+
+section#cadastro h2 {
+    text-align: center;
+    color: rgb(190, 190, 190);
+}
+
+section#cadastro form {
+    width: 100%;
+
+}
+
+section#cadastro form input {
+    width: 100%;
+    padding: .8rem;
+    font-size: .7rem;
+    outline: none;
+    border: solid 2px ;
+    margin: 0 1rem 1rem 1rem;
+}
+
+section#cadastro form label {
+    margin: 1rem;
+}
+
+section#cadastro form button{
+    padding: .9rem;
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    font-size: 1rem;
+    background-color: rgb(161, 20, 20); 
+    color: white;
+    border: solid rgb(255, 255, 255);
+    cursor: pointer;
+    transition: all 0.7s ease-in-out;
+}
+
+section#cadastro form button:hover{
+    background-color: #fff;
+    color: rgb(161, 20, 20);
+    border: solid rgb(161, 20, 20);
+}
+
+footer {
+    background-color: rgb(23, 120, 117);;
+    padding: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  footer p {
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 0.3rem;
+  }
+  
+  footer p a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+  }
+  
+  /* mensagem de confirmação */
+  section#mensagem {
+    padding: 1.5rem;
+    background-color: rgb(197, 255, 214);
+    color: #004d04;
+    position: fixed;
+    top: 3rem;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 600;  
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  span#close {
+    font-size: 2rem;
+    cursor: pointer;
+    transition: .3s;
+  }
+  
+  span#close:hover{
+    color: rgb(255, 0, 0);
+    transform: scale(1.5);
+  } 
